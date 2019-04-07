@@ -7030,19 +7030,37 @@ html, body {
   .container {
     width: auto; } }
 
-header .navbar {
-  padding-right: 0;
-  padding-left: 0; }
-
-header .navbar-brand img {
-  max-height: 2rem; }
-
-@media (min-width: 768px) {
+header {
+  position: fixed;
+  z-index: 999;
+  width: 100%; }
+  header .navbar {
+    padding-right: 0;
+    padding-left: 0; }
   header .navbar-brand img {
-    max-height: 3rem; } }
+    max-height: 2rem; }
+  @media (min-width: 768px) {
+    header .navbar-brand img {
+      max-height: 3rem; } }
+
+footer .fa-phone-square {
+  font-size: 1.9rem; }
 
 footer img {
   max-width: 200px; }
+
+footer h6 {
+  font-size: 1.5rem; }
+
+footer .fa-envelope {
+  font-size: 1.9rem; }
+  footer .fa-envelope p {
+    font-size: 1.4rem;
+    color: blue; }
+
+footer .text-small .ab {
+  margin-top: 1rem;
+  font-size: 1.3rem; }
 
 .home-slider .owl-carousel .item {
   position: relative; }
@@ -7055,6 +7073,10 @@ footer img {
     width: 100%;
     display: flex;
     align-items: center; }
+    .home-slider .owl-carousel .item .title h2 {
+      color: yellow; }
+    .home-slider .owl-carousel .item .title p {
+      color: #007bff; }
   @media (min-width: 768px) {
     .home-slider .owl-carousel .item .title {
       position: absolute;
@@ -7071,6 +7093,27 @@ footer img {
 .home-slider .owl-carousel .owl-dots {
   margin-bottom: 2rem; }
 
+.home-news h1 {
+  color: red;
+  position: relative; }
+  .home-news h1:before {
+    display: block;
+    content: '';
+    position: absolute;
+    height: .3rem;
+    width: 18rem;
+    background: gray;
+    left: 15%;
+    top: 110%; }
+
+@media (min-width: 768px) {
+  .home-news h1:before {
+    height: .3rem;
+    width: 18rem;
+    background: gray;
+    left: 39%;
+    top: 110%; } }
+
 .home-news .item figure .blockimg {
   border-radius: 10px;
   overflow: hidden; }
@@ -7082,12 +7125,20 @@ footer img {
   .home-news .item figure figcaption h3 {
     font-size: 1.1rem;
     margin-bottom: 0; }
+    .home-news .item figure figcaption h3 a {
+      text-decoration: none; }
+      .home-news .item figure figcaption h3 a:hover, .home-news .item figure figcaption h3 a:active {
+        color: red; }
   .home-news .item figure figcaption time {
     font-size: 0.85rem;
     color: #b3b3b3; }
   .home-news .item figure figcaption p {
     margin-top: .5rem;
     color: gray; }
+
+.home-clients h2 {
+  color: red;
+  font-size: 2.2rem; }
 
 .home-clients .owl-carousel .item {
   padding: 0.5rem; }

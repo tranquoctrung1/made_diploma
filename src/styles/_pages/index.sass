@@ -12,6 +12,10 @@
 				width: 100%
 				display: flex
 				align-items: center
+				h2
+					color: yellow
+				p
+					color: #007bff
 			+media-breakpoint-up(md)
 				.title
 					+pos(abs, 0 null null 0)
@@ -30,6 +34,26 @@
 /////////////////////////////////
 
 .home-news
+	h1
+		color: red
+		position: relative
+		&:before
+			display: block
+			content: ''
+			position: absolute
+			height: .3rem
+			width: 18rem
+			background: darken(#fff,50%)
+			left: 15%
+			top: 110%
+	+media-breakpoint-up(md)
+		h1
+			&:before
+				height: .3rem
+				width: 18rem
+				background: darken(#fff,50%)
+				left: 39%
+				top: 110%
 	.item 
 		figure
 			.blockimg
@@ -42,6 +66,11 @@
 				h3 
 					+fz(1.1rem)
 					margin-bottom: 0
+					a
+						text-decoration: none
+						&:hover,&:active
+							color: red
+
 				time 
 					+fz(.85rem)
 					color: darken($whites,30%)
@@ -53,6 +82,9 @@
 /////////////////////////////////
 
 .home-clients
+	h2
+		color: red
+		font-size: 2.2rem
 	.owl-carousel
 		.item 
 			+pad(.5rem)
