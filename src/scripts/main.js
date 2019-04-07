@@ -15,6 +15,8 @@ $(document).ready(function () {
 		items: 1,
 		nav: true,
 		dots: false,
+		loop: true,
+		autoplay: true,
 		navText: ['<i class="fa fa-chevron-left"></i>', '<i class="fa fa-chevron-right"></i>'],
 		responsive: {
 			// breakpoint from 480 up
