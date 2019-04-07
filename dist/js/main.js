@@ -61,5 +61,9 @@ $(document).ready(function () {
 			}
 		}
 	});
+
+	$('#dropdownMenuButton').on('click', function () {
+		$('#dropdownMenuButton').toggleClass('active');
+	});
 });
 //# sourceMappingURL=main.js.map
