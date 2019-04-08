@@ -8,6 +8,8 @@ $(document).ready(function () {
 		items: 1,
 		dots: true,
 		autoplay: true,
+		autoplayHoverPause: true,
+		autoplaySpeed: 1000,
 		//navText: ['<i class="fa fa-chevron-left"></i>', '<i class="fa fa-chevron-right"></i>'],
 	});
 	// Phần Clients
@@ -17,6 +19,8 @@ $(document).ready(function () {
 		dots: false,
 		loop: true,
 		autoplay: true,
+		autoplayHoverPause: true,
+		autoplaySpeed: 1000,
 		navText: ['<i class="fa fa-chevron-left"></i>', '<i class="fa fa-chevron-right"></i>'],
 		responsive: {
 			// breakpoint from 480 up
@@ -37,5 +41,16 @@ $(document).ready(function () {
 	$('#dropdownMenuButton').on('click',() =>
 	{
 		$('#dropdownMenuButton').toggleClass('active')
+	})
+	$(window).on('scroll',() =>
+	{
+		if($(this).scrollTop() >= 20)
+		{
+			$('header').addClass('active')
+		}
+		else 
+		{
+			$('header').removeClass('active')
+		}
 	})
 });

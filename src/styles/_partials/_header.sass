@@ -1,12 +1,29 @@
 header
-	position: fixed
-	z-index: 999
 	width: 100%
+	&.active
+		position: fixed
+		top: 0
+		left: 0
+		z-index: 1
 	.navbar
 		+pad(null 0)
 	.navbar-brand
 		img 
 			max-height: 2rem
+	.navbar-light 
+		.navbar-nav 
+			.nav-link
+				color: black
+				margin: 5px
+				transition: .5s all ease-in-out
+				&.active
+					background: black
+					color: white
+					border-radius: 15px 0 15px 0
+				&:hover
+					background: red
+					color: black
+					font-weight: bolder
 	+media-breakpoint-up(md)
 		.navbar-brand
 			img 

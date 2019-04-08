@@ -6,26 +6,23 @@
 		// Phần Slider
 		.item
 			position: relative
+			filter: grayscale(50%)
 			.title
-				+pad(2rem 0)
-				height: 100%
-				width: 100%
-				display: flex
-				align-items: center
-				h2
-					color: yellow
-				p
-					color: #007bff
+				+pad(1rem 0)
 			+media-breakpoint-up(md)
 				.title
-					+pos(abs, 0 null null 0)
+					+pos(abs, null 0 0 null)
 					color: $whites
+					background-image: linear-gradient(to bottom right, transparent, #000000a6)
+					width: 100%
 					+text-shadow()
 					h2
-						+fz(3rem)
+						+fz(2rem)
+						color: white
 					p 
-						+fz(1.5rem)
+						+fz(1rem)
 						+lh(2rem)
+						color: white
 		// Phần Control
 		.owl-dots
 			margin-bottom: 2rem
@@ -68,6 +65,7 @@
 					margin-bottom: 0
 					a
 						text-decoration: none
+						transition: .5s all ease-in-out
 						&:hover,&:active
 							color: red
 

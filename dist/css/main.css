@@ -7031,14 +7031,29 @@ html, body {
     width: auto; } }
 
 header {
-  position: fixed;
-  z-index: 999;
   width: 100%; }
+  header.active {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1; }
   header .navbar {
     padding-right: 0;
     padding-left: 0; }
   header .navbar-brand img {
     max-height: 2rem; }
+  header .navbar-light .navbar-nav .nav-link {
+    color: black;
+    margin: 5px;
+    transition: .5s all ease-in-out; }
+    header .navbar-light .navbar-nav .nav-link.active {
+      background: black;
+      color: white;
+      border-radius: 15px 0 15px 0; }
+    header .navbar-light .navbar-nav .nav-link:hover {
+      background: red;
+      color: black;
+      font-weight: bolder; }
   @media (min-width: 768px) {
     header .navbar-brand img {
       max-height: 3rem; } }
@@ -7062,33 +7077,41 @@ footer .text-small .ab {
   margin-top: 1rem;
   font-size: 1.3rem; }
 
+footer .text-small li i.fas.fa-comment-dots {
+  font-size: 28px; }
+
+footer .text-small li a {
+  text-decoration: none;
+  font-weight: bolder;
+  color: #2ecc71;
+  transition: .5s all ease-in-out; }
+  footer .text-small li a:hover {
+    color: red; }
+
 .home-slider .owl-carousel .item {
-  position: relative; }
+  position: relative;
+  filter: grayscale(50%); }
   .home-slider .owl-carousel .item .title {
-    padding-top: 2rem;
+    padding-top: 1rem;
     padding-right: 0;
-    padding-bottom: 2rem;
-    padding-left: 0;
-    height: 100%;
-    width: 100%;
-    display: flex;
-    align-items: center; }
-    .home-slider .owl-carousel .item .title h2 {
-      color: yellow; }
-    .home-slider .owl-carousel .item .title p {
-      color: #007bff; }
+    padding-bottom: 1rem;
+    padding-left: 0; }
   @media (min-width: 768px) {
     .home-slider .owl-carousel .item .title {
       position: absolute;
-      top: 0;
-      left: 0;
+      right: 0;
+      bottom: 0;
       color: #ffffff;
+      background-image: linear-gradient(to bottom right, transparent, #000000a6);
+      width: 100%;
       text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.4); }
       .home-slider .owl-carousel .item .title h2 {
-        font-size: 3rem; }
+        font-size: 2rem;
+        color: white; }
       .home-slider .owl-carousel .item .title p {
-        font-size: 1.5rem;
-        line-height: 2rem; } }
+        font-size: 1rem;
+        line-height: 2rem;
+        color: white; } }
 
 .home-slider .owl-carousel .owl-dots {
   margin-bottom: 2rem; }
@@ -7126,7 +7149,8 @@ footer .text-small .ab {
     font-size: 1.1rem;
     margin-bottom: 0; }
     .home-news .item figure figcaption h3 a {
-      text-decoration: none; }
+      text-decoration: none;
+      transition: .5s all ease-in-out; }
       .home-news .item figure figcaption h3 a:hover, .home-news .item figure figcaption h3 a:active {
         color: red; }
   .home-news .item figure figcaption time {
@@ -7164,10 +7188,14 @@ footer .text-small .ab {
         color: red;
         font-weight: bolder;
         margin: 1rem 0; }
-      .main .container .row .main-col .infor b.fa.fa-mobile {
-        font-size: 25px; }
-      .main .container .row .main-col .infor b.fa.fa-envelope-o {
-        font-size: 25px; }
+      .main .container .row .main-col .infor b.fas.fa-mobile-alt {
+        font-size: 25px;
+        margin: .5em; }
+      .main .container .row .main-col .infor b.far.fa-envelope {
+        font-size: 25px;
+        margin-top: .5em; }
+      .main .container .row .main-col .infor b.email {
+        font-size: 20px; }
     .main .container .row nav ul {
       padding: 0; }
       .main .container .row nav ul li {
@@ -7193,7 +7221,7 @@ footer .text-small .ab {
     .main .container .row .dropdown {
       margin: 1rem 0; }
       .main .container .row .dropdown #dropdownMenuButton.active {
-        background: #95a5a6;
+        background: black;
         border: none; }
         .main .container .row .dropdown #dropdownMenuButton.active:after {
           transition: .5s all ease-in-out;
